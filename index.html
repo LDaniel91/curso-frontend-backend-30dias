@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Frontend & Backend - 30 Días | Dev Master</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🚀</text></svg>">
+</head>
+<body>
+    <!-- NAVEGACIÓN PRINCIPAL -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>🚀 Dev Master 30</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link" onclick="closeMenu()">Inicio</a></li>
+                <li><a href="#semanas" class="nav-link" onclick="closeMenu()">Semanas</a></li>
+                <li><a href="#modulos" class="nav-link" onclick="closeMenu()">Módulos</a></li>
+                <li><a href="#proyectos" class="nav-link" onclick="closeMenu()">Proyectos</a></li>
+                <li><a href="#recursos" class="nav-link" onclick="closeMenu()">Recursos</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN HERO -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Domina Frontend y Backend en 30 Días</h2>
+            <p>Un curso profesional, paso a paso, desde cero hasta intermedio</p>
+            <button class="cta-button" onclick="scrollToSection('semanas')">Comenzar Ahora</button>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <h3>4 Semanas</h3>
+                <p>Estructura completa</p>
+            </div>
+            <div class="stat">
+                <h3>20 Módulos</h3>
+                <p>Contenido detallado</p>
+            </div>
+            <div class="stat">
+                <h3>4 Proyectos</h3>
+                <p>Capstone finales</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DASHBOARD DE PROGRESO -->
+    <section id="progreso" class="progress-section">
+        <div class="container">
+            <h2>📊 Tu Progreso</h2>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+            </div>
+            <p id="progressText">0% Completado</p>
+            <div class="progress-buttons">
+                <button onclick="resetProgress()" class="btn-secondary">Reiniciar</button>
+                <button onclick="downloadCertificate()" class="btn-primary">Descargar Certificado</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEMANAS -->
+    <section id="semanas" class="semanas-section">
+        <div class="container">
+            <h2>📅 4 Semanas de Aprendizaje</h2>
+            
+            <!-- SEMANA 1 -->
+            <div class="semana-card">
+                <div class="semana-header semana-1">
+                    <h3>SEMANA 1: Fundamentos Web</h3>
+                    <span class="semana-badge">Días 1-5</span>
+                </div>
+                <div class="semana-content">
+                    <p><strong>🎯 Objetivo:</strong> Comprender los fundamentos de la web y HTML/CSS</p>
+                    <ul class="tema-list">
+                        <li>✓ Día 1: Introducción a HTML5</li>
+                        <li>✓ Día 2: CSS3 y Diseño Responsive</li>
+                        <li>✓ Día 3: JavaScript Básico</li>
+                        <li>✓ Día 4: DOM y Eventos</li>
+                        <li>✓ Día 5: Proyecto: Portafolio Personal</li>
+                    </ul>
+                    <button onclick="openModule('semana1')" class="btn-modulo">Ver Contenido</button>
+                </div>
+            </div>
+
+            <!-- SEMANA 2 -->
+            <div class="semana-card">
+                <div class="semana-header semana-2">
+                    <h3>SEMANA 2: Frontend Avanzado</h3>
+                    <span class="semana-badge">Días 6-10</span>
+                </div>
+                <div class="semana-content">
+                    <p><strong>🎯 Objetivo:</strong> Dominar React y componentes modernos</p>
+                    <ul class="tema-list">
+                        <li>✓ Día 6: Introducción a React</li>
+                        <li>✓ Día 7: Componentes y Props</li>
+                        <li>✓ Día 8: Estado y Hooks</li>
+                        <li>✓ Día 9: Routing y Navegación</li>
+                        <li>✓ Día 10: Proyecto: App de Tareas Avanzada</li>
+                    </ul>
+                    <button onclick="openModule('semana2')" class="btn-modulo">Ver Contenido</button>
+                </div>
+            </div>
+
+            <!-- SEMANA 3 -->
+            <div class="semana-card">
+                <div class="semana-header semana-3">
+                    <h3>SEMANA 3: Backend con Node.js</h3>
+                    <span class="semana-badge">Días 11-15</span>
+                </div>
+                <div class="semana-content">
+                    <p><strong>🎯 Objetivo:</strong> Crear servidores y APIs RESTful</p>
+                    <ul class="tema-list">
+                        <li>✓ Día 11: Node.js y Express</li>
+                        <li>✓ Día 12: Rutas y Controladores</li>
+                        <li>✓ Día 13: Manejo de Bases de Datos</li>
+                        <li>✓ Día 14: Autenticación y JWT</li>
+                        <li>✓ Día 15: Proyecto: API REST Completa</li>
+                    </ul>
+                    <button onclick="openModule('semana3')" class="btn-modulo">Ver Contenido</button>
+                </div>
+            </div>
+
+            <!-- SEMANA 4 -->
+            <div class="semana-card">
+                <div class="semana-header semana-4">
+                    <h3>SEMANA 4: Full Stack Integration</h3>
+                    <span class="semana-badge">Días 16-20</span>
+                </div>
+                <div class="semana-content">
+                    <p><strong>🎯 Objetivo:</strong> Integrar Frontend y Backend en aplicaciones completas</p>
+                    <ul class="tema-list">
+                        <li>✓ Día 16: Consumo de APIs con Fetch</li>
+                        <li>✓ Día 17: Integración React + Node.js</li>
+                        <li>✓ Día 18: Deploy y Deployment</li>
+                        <li>✓ Día 19: Testing y Debugging</li>
+                        <li>✓ Día 20: Proyecto Final: E-commerce Completo</li>
+                    </ul>
+                    <button onclick="openModule('semana4')" class="btn-modulo">Ver Contenido</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MÓDULOS DETALLADOS -->
+    <section id="modulos" class="modulos-section">
+        <div class="container">
+            <h2>📚 Módulos del Curso</h2>
+            
+            <!-- TAB BUTTONS -->
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="showTab('frontend')">Frontend</button>
+                <button class="tab-btn" onclick="showTab('backend')">Backend</button>
+                <button class="tab-btn" onclick="showTab('bases-datos')">Bases de Datos</button>
+            </div>
+
+            <!-- FRONTEND CONTENT -->
+            <div id="frontend" class="tab-content active">
+                <div class="modulo-grid">
+                    <div class="modulo-card">
+                        <div class="modulo-header html">
+                            <h4>HTML5 Semántico</h4>
+                            <span>Semana 1</span>
+                        </div>
+                        <p>Aprende estructura semántica, mejores prácticas y accesibilidad web.</p>
+                        <button onclick="viewLessonContent('html5')" class="btn-leccion">Ver Lección</button>
+                    </div>
+
+                    <div class="modulo-card">
+                        <div class="modulo-header css">
+                            <h4>CSS3 Avanzado</h4>
+                            <span>Semana 1</span>
+                        </div>
+                        <p>Flexbox, Grid, Animaciones y diseño responsive moderno.</p>
+                        <button onclick="viewLessonContent('css3')" class="btn-leccion">Ver Lección</button>
+                    </div>
+
+                    <div class="modulo-card">
+                        <div class="modulo-header js">
+                            <h4>JavaScript ES6+</h4>
+                            <span>Semana 1-2</span>
+                        </div>
+                        <p>Variables, funciones, async/await, closures y más.</p>
+                        <button onclick="viewLessonContent('javascript')" class="btn-leccion">Ver Lección</button>
+                    </div>
+
+                    <div class="modulo-card">
+                        <div class="modulo-header react">
+                            <h4>React & Hooks</h4>
+                            <span>Semana 2</span>
+                        </div>
+                        <p>Componentes funcionales, useState, useEffect, custom hooks.</p>
+                        <button onclick="viewLessonContent('react')" class="btn-leccion">Ver Lección</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BACKEND CONTENT -->
+            <div id="backend" class="tab-content">
+                <div class="modulo-grid">
+                    <div class="modulo-card">
+                        <div class="modulo-header nodejs">
+                            <h4>Node.js Fundamentals</h4>
+                            <span>Semana 3</span>
+                        </div>
+                        <p>Runtime, módulos, NPM, y arquitectura de servidores.</p>
+                        <button onclick="viewLessonContent('nodejs')" class="btn-leccion">Ver Lección</button>
+                    </div>
+
+                    <div class="modulo-card">
+                        <div class="modulo-header express">
+                            <h4>Express & APIs</h4>
+                            <span>Semana 3</span>
+                        </div>
+                        <p>Crear rutas, middleware, controladores y APIs RESTful.</p>
+                        <button onclick="viewLessonContent('express')" class="btn-leccion">Ver Lección</button>
+                    </div>
+
+                    <div class="modulo-card">
+                        <div class="modulo-header auth">
+                            <h4>Autenticación y JWT</h4>
+                            <span>Semana 3</span>
+                        </div>
+                        <p>Implementar seguridad, tokens, y control de acceso.</p>
+                        <button onclick="viewLessonContent('jwt')" class="btn-leccion">Ver Lección</button>
+                    </div>
+
+                    <div class="modulo-card">
+                        <div class="modulo-header deploy">
+                            <h4>Deploy & DevOps</h4>
+                            <span>Semana 4</span>
+                        </div>
+                        <p>Heroku, Vercel, Docker, variables de entorno.</p>
+                        <button onclick="viewLessonContent('deploy')" class="btn-leccion">Ver Lección</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BASES DE DATOS CONTENT -->
+            <div id="bases-datos" class="tab-content">
+                <div class="modulo-grid">
+                    <div class="modulo-card">
+                        <div class="modulo-header mongodb">
+                            <h4>MongoDB NoSQL</h4>
+                            <span>Semana 3</span>
+                        </div>
+                        <p>Documentos JSON, colecciones, queries y Mongoose ODM.</p>
+                        <button onclick="viewLessonContent('mongodb')" class="btn-leccion">Ver Lección</button>
+                    </div>
+
+                    <div class="modulo-card">
+                        <div class="modulo-header postgresql">
+                            <h4>PostgreSQL SQL</h4>
+                            <span>Semana 3</span>
+                        </div>
+                        <p>Tablas relacionales, queries SQL, y Sequelize ORM.</p>
+                        <button onclick="viewLessonContent('postgresql')" class="btn-leccion">Ver Lección</button>
+                    </div>
+
+                    <div class="modulo-card">
+                        <div class="modulo-header mysql">
+                            <h4>MySQL</h4>
+                            <span>Semana 3</span>
+                        </div>
+                        <p>Bases de datos relacionales, índices, y transacciones.</p>
+                        <button onclick="viewLessonContent('mysql')" class="btn-leccion">Ver Lección</button>
+                    </div>
+
+                    <div class="modulo-card">
+                        <div class="modulo-header relaciones">
+                            <h4>Relaciones de BD</h4>
+                            <span>Semana 3-4</span>
+                        </div>
+                        <p>One-to-Many, Many-to-Many, diseño de esquemas.</p>
+                        <button onclick="viewLessonContent('relaciones')" class="btn-leccion">Ver Lección</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DE CONTENIDO DE LECCIONES -->
+    <div id="lessonModal" class="modal" onclick="closeLessonModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeLessonModal()">&times;</span>
+            <div id="lessonContentArea"></div>
+        </div>
+    </div>
+
+    <!-- PROYECTOS CAPSTONE -->
+    <section id="proyectos" class="proyectos-section">
+        <div class="container">
+            <h2>🏆 Proyectos Capstone</h2>
+            <p class="section-description">Proyectos prácticos al final de cada semana para aplicar lo aprendido</p>
+
+            <div class="proyectos-grid">
+                <!-- Proyecto 1 -->
+                <div class="proyecto-card">
+                    <div class="proyecto-header">
+                        <h3>Proyecto 1: Portafolio Personal</h3>
+                        <span class="proyecto-semana">Semana 1</span>
+                    </div>
+                    <div class="proyecto-body">
+                        <p><strong>Tecnologías:</strong> HTML5, CSS3, JavaScript</p>
+                        <p><strong>Duración:</strong> 5 días</p>
+                        <p><strong>Descripción:</strong> Crea tu portafolio profesional con diseño responsive, efectos de animación y formulario de contacto.</p>
+                        <ul class="proyecto-features">
+                            <li>✓ Diseño responsive</li>
+                            <li>✓ Animaciones CSS</li>
+                            <li>✓ Formulario funcional</li>
+                            <li>✓ Sección de proyectos</li>
+                        </ul>
+                        <button onclick="viewProjectContent('proyecto1')" class="btn-proyecto">Ver Detalles</button>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="proyecto-card">
+                    <div class="proyecto-header">
+                        <h3>Proyecto 2: App de Tareas Avanzada</h3>
+                        <span class="proyecto-semana">Semana 2</span>
+                    </div>
+                    <div class="proyecto-body">
+                        <p><strong>Tecnologías:</strong> React, Hooks, Context API</p>
+                        <p><strong>Duración:</strong> 5 días</p>
+                        <p><strong>Descripción:</strong> Aplicación interactiva de tareas con React, manejo de estado y almacenamiento local.</p>
+                        <ul class="proyecto-features">
+                            <li>✓ Componentes React</li>
+                            <li>✓ Estado con Hooks</li>
+                            <li>✓ LocalStorage</li>
+                            <li>✓ Filtros y búsqueda</li>
+                        </ul>
+                        <button onclick="viewProjectContent('proyecto2')" class="btn-proyecto">Ver Detalles</button>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="proyecto-card">
+                    <div class="proyecto-header">
+                        <h3>Proyecto 3: API REST Completa</h3>
+                        <span class="proyecto-semana">Semana 3</span>
+                    </div>
+                    <div class="proyecto-body">
+                        <p><strong>Tecnologías:</strong> Node.js, Express, MongoDB</p>
+                        <p><strong>Duración:</strong> 5 días</p>
+                        <p><strong>Descripción:</strong> API REST para sistema de blog con autenticación JWT y CRUD completo.</p>
+                        <ul class="proyecto-features">
+                            <li>✓ Rutas RESTful</li>
+                            <li>✓ Autenticación JWT</li>
+                            <li>✓ MongoDB</li>
+                            <li>✓ Validaciones</li>
+                        </ul>
+                        <button onclick="viewProjectContent('proyecto3')" class="btn-proyecto">Ver Detalles</button>
+                    </div>
+                </div>
+
+                <!-- Proyecto 4 -->
+                <div class="proyecto-card">
+                    <div class="proyecto-header">
+                        <h3>Proyecto 4: E-commerce Full Stack</h3>
+                        <span class="proyecto-semana">Semana 4</span>
+                    </div>
+                    <div class="proyecto-body">
+                        <p><strong>Tecnologías:</strong> React, Node.js, PostgreSQL</p>
+                        <p><strong>Duración:</strong> 5 días</p>
+                        <p><strong>Descripción:</strong> Plataforma e-commerce con carrito de compras, integración de pagos y dashboard.</p>
+                        <ul class="proyecto-features">
+                            <li>✓ Frontend con React</li>
+                            <li>✓ Backend API</li>
+                            <li>✓ Base de datos SQL</li>
+                            <li>✓ Gestión de carrito</li>
+                        </ul>
+                        <button onclick="viewProjectContent('proyecto4')" class="btn-proyecto">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DE PROYECTOS -->
+    <div id="projectModal" class="modal" onclick="closeProjectModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeProjectModal()">&times;</span>
+            <div id="projectContentArea"></div>
+        </div>
+    </div>
+
+    <!-- RECURSOS Y DESCARGAS -->
+    <section id="recursos" class="recursos-section">
+        <div class="container">
+            <h2>📚 Recursos y Herramientas</h2>
+            
+            <div class="recursos-grid">
+                <div class="recurso-card">
+                    <h3>🎨 Herramientas Frontend</h3>
+                    <ul>
+                        <li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+                        <li><a href="https://chrome.google.com/" target="_blank">Chrome DevTools</a></li>
+                        <li><a href="https://www.postman.com/" target="_blank">Postman</a></li>
+                        <li><a href="https://www.figma.com/" target="_blank">Figma</a></li>
+                        <li><a href="https://git-scm.com/" target="_blank">Git & GitHub</a></li>
+                    </ul>
+                </div>
+
+                <div class="recurso-card">
+                    <h3>📖 Documentación Oficial</h3>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+                        <li><a href="https://react.dev/" target="_blank">React Docs</a></li>
+                        <li><a href="https://nodejs.org/docs/" target="_blank">Node.js Docs</a></li>
+                        <li><a href="https://expressjs.com/" target="_blank">Express Docs</a></li>
+                        <li><a href="https://www.mongodb.com/docs/" target="_blank">MongoDB Docs</a></li>
+                    </ul>
+                </div>
+
+                <div class="recurso-card">
+                    <h3>📚 Libros Recomendados</h3>
+                    <ul>
+                        <li>JavaScript: The Good Parts</li>
+                        <li>You Don't Know JS</li>
+                        <li>Eloquent JavaScript</li>
+                        <li>Clean Code</li>
+                        <li>The Pragmatic Programmer</li>
+                    </ul>
+                </div>
+
+                <div class="recurso-card">
+                    <h3>👥 Comunidades</h3>
+                    <ul>
+                        <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+                        <li><a href="https://dev.to/" target="_blank">Dev.to</a></li>
+                        <li><a href="https://reddit.com/r/learnprogramming" target="_blank">Reddit r/learnprogramming</a></li>
+                        <li><a href="https://github.com/" target="_blank">GitHub Discussions</a></li>
+                        <li>Discord Comunidades</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Dev Master 30 - Curso Profesional de Frontend y Backend</p>
+            <p>Creado con ❤️ para desarrolladores en crecimiento</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
